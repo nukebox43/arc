@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Itim&family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="menupage.css">
+    <title>Menu</title>
+    <link rel="icon" href="images/logo/favicon.ico">
+</head>
+<body>
+    <header>
+        <img src="images/logo/name.png" alt="name">
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <button id="cartBtn">Cart</button>
+            </ul>
+        </nav>
+    </header>
+    <div class="placeholder"></div>
+    <main>
+
+        <div id="orderForm" class="popup">
+        <div class="menu-container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="meal-sec">Meals</button>
+                <button class="filter-btn" data-category="drink">Drinks</button>
+            </div>
+    <div class="menu" data-category="meal-sec">
+        <!-- Meal items -->
+            <h1 class="meals-h1">MEALS</h1>
+            <div class="meals">
+         <!-- Display menu items here -->
+                <!--start item1-->
+                <div class="menu-item">
+                    <img src="images/menu/pork%20siomai.png" alt="siomai1">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>PORK SIOMAI</center></span>
+                        <hr>
+                        <div class="item-options">
+                            <label>
+                                <label for="variety-siomai-1"><b>Choose a variety: </b></label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="3pcs-w-o-rice" data-price="19.00">3pcs w/o rice - ₱19.00</option>
+                                <option value="3pcs-w-rice" data-price="29.00">3pcs w/ rice - ₱29.00</option>
+                                <option value="4pcs-w-o-rice" data-price="25.00">4pcs w/o rice - ₱25.00</option>
+                                <option value="4pcs-w-rice" data-price="35.00">4pcs w/ rice - ₱35.00</option>
+                                <option value="5pcs-w-o-rice" data-price="31.00">5pcs w/o rice - ₱31.00</option>
+                                <option value="5pcs-w-rice" data-price="41.00">5pcs w/ rice - ₱41.00</option>
+                            </select>
+                            </label>
+                                </div>
+                            <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                        </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item1-->
+                
+                 <!--start item2-->
+                <div class="menu-item">
+                    <img src="images/menu/beef%20siomai.png" alt="siomai2">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>BEEF SIOMAI</center></span>
+                        <hr>
+                        <div class="item-options">
+                            <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="3pcs-w-o-rice" data-price="20.00">3pcs w/o rice - ₱20.00</option>
+                                <option value="3pcs-w-rice" data-price="30.00">3pcs w/ rice - ₱30.00</option>
+                                <option value="4pcs-w-o-rice" data-price="26.00">4pcs w/o rice - ₱26.00</option>
+                                <option value="4pcs-w-rice" data-price="36.00">4pcs w/ rice - ₱36.00</option>
+                                <option value="5pcs-w-o-rice" data-price="33.00">5pcs w/o rice - ₱33.00</option>
+                                <option value="5pcs-w-rice" data-price="43.00">5pcs w/ rice - ₱43.00</option>
+                            </select>
+                        </div>
+                        <b class="quantity-label">Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item2-->
+                
+                <!--start item3-->
+                <div class="menu-item">
+                    <img src="images/menu/sharkspin.png" alt="siomai3" width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>SHARKSFIN SIOMAI</center></span>
+                        <hr>
+                        <div class="item-options">
+                            <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="3pcs-w-o-rice" data-price="22.00">3pcs w/o rice - ₱22.00</option>
+                                <option value="3pcs-w-rice" data-price="32.00">3pcs w/ rice - ₱32.00</option>
+                                <option value="4pcs-w-o-rice" data-price="29.00">4pcs w/o rice - ₱29.00</option>
+                                <option value="4pcs-w-rice" data-price="39.00">4pcs w/ rice - ₱39.00</option>
+                                <option value="5pcs-w-o-rice" data-price="36.00">5pcs w/o rice - ₱36.00</option>
+                                <option value="5pcs-w-rice" data-price="46.00">5pcs w/ rice - ₱46.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item3-->
+                
+                <!--start item4-->
+                <div class="menu-item">
+                    <img src="images/menu/hamsilog.jpg" alt="hamNcheese"width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>HAM WITH EGG</center></span>
+                        <hr>
+                        <div class="item-options">
+                           <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-o-rice" data-price="30.00">w/o rice - ₱30.00</option>
+                                <option value="w-rice" data-price="40.00">w/ rice - ₱40.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item4-->
+                
+                <!--start item5-->
+                <div class="menu-item">
+                    <img src="images/menu/longsilog.jpg" alt="longganisa" width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>LONGGANISA<br> (skinless with egg)</center></span>
+                        <hr>
+                        <div class="item-options">
+                            <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-o-rice" data-price="30.00">w/o rice - ₱30.00</option>
+                                <option value="w-rice" data-price="40.00">w/ rice - ₱40.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item5-->
+                
+                <!--start item6-->
+                <div class="menu-item">
+                    <img src="images/menu/chicken and cheese.jpg" alt="chicncheese" width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>CHICKEN AND CHEESE<br> (hotdog with egg)</center></span>
+                        <hr>
+                        <div class="item-options">
+                            <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-o-rice" data-price="31.00">w/o rice - ₱31.00</option>
+                                <option value="w-rice" data-price="41.00">w/ rice - ₱41.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item6-->
+                
+                <!--start item7-->
+                <div class="menu-item">
+                    <img src="images/menu/hotsilog.jpg" alt="jumbo hotdog" width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>JUMBO HOTDOG<br>(with egg)</center></span>
+                        <hr>
+                        <div class="item-options">
+                            <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-o-rice" data-price="32.00">w/o rice - ₱32.00</option>
+                                <option value="w-rice" data-price="42.00">w/ rice - ₱42.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item7-->
+                
+                <!--start item8-->
+                <div class="menu-item">
+                    <img src="images/menu/tocilog.jpg" alt="tocino w egg"width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>TOCINO WITH EGG</center></span>
+                        <hr>
+                        <div class="item-options">
+                            <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-o-rice" data-price="32.00">w/o rice - ₱32.00</option>
+                                <option value="w-rice" data-price="42.00">w/ rice - ₱42.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item8-->
+                
+                <!--start item9-->
+                <div class="menu-item">
+                    <img src="images/menu/embosilog.jpg" alt="embotido" width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>EMBOTIDO</center></span>
+                        <hr>
+                        <div class="item-options">
+                            <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-o-rice" data-price="20.00">w/o rice - ₱20.00</option>
+                                <option value="w-rice" data-price="30.00">w/ rice - ₱30.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item9-->
+                
+                <!--start item10-->
+                <div class="menu-item">
+                    <img src="images/menu/chickenfillet.png" alt="chicken fillet" width="30" height="30">
+                    <hr>
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>CHICKEN FILLET</center></span>
+                        <hr>
+                        <div class="item-options">
+                           <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-o-rice" data-price="33.00">w/o rice - ₱33.00</option>
+                                <option value="w-rice" data-price="43.00">w/ rice - ₱43.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item10-->
+                
+                <!--start item11-->
+                <div class="menu-item">
+                    <img src="images/menu/ONION RINGS WITH RICE.png" alt="onion rings" width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>ONION RINGS WITH RICE</center></span>
+                        <hr>
+                        <div class="item-options">
+                            <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-rice" data-price="35.00">w/rice - ₱35.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item11-->
+                
+                <!--start item12-->
+                <div class="menu-item">
+                    <img src="images/menu/fried chicken.png" alt="fried chicken" width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>FRIED CHICKEN</center></span>
+                        <hr>
+                        <div class="item-options">
+                            <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-o-rice" data-price="40.00">w/o rice - ₱40.00</option>
+                                <option value="w-rice" data-price="50.00">w/ rice - ₱50.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item12-->
+                
+                <!--start item13-->
+                <div class="menu-item">
+                    <img src="images/menu/porkchop.png" alt="porkchop">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>PORK CHOP</center></span>
+                        <hr>
+                        <div class="item-options">
+                           <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-o-rice" data-price="45.00">w/o rice - ₱45.00</option>
+                                <option value="w-rice" data-price="55.00">w/ rice - ₱55.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item13-->
+                
+                <!--start item14-->
+                <div class="menu-item">
+                    <img src="images/menu/chicken%20nuggets.png" alt="chicken nuggets">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>CHICKEN NUGGETS WITH RICE</center></span>
+                        <hr>
+                        <div class="item-options">
+                           <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-rice" data-price="35.00">w/o rice - ₱35.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item14-->
+                
+                <!--start item15-->
+                <div class="menu-item">
+                    <img src="images/menu/lechon%20kawali.png" alt="lechon kawali">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>LECHON KAWALI</center></span>
+                        <hr>
+                        <div class="item-options">
+                            <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-rice" data-price="50.00">w/ rice - ₱50.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item15-->
+                
+                <!--start item16-->
+                <div class="menu-item">
+                    <img src="images/menu/SISIG WITH RICE.jpg" alt="sisig"width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>SISIG WITH RICE</center></span>
+                        <hr>
+                        <div class="item-options">
+                           <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-rice" data-price="50.00">w/ rice - ₱50.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item16-->
+                
+                <!--start item17-->
+                <div class="menu-item">
+                    <img src="images/menu/chicken%20wings.png" alt="honey soy garlic chicken"width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>HONEY SOY GARLIC CHICKEN</center></span>
+                        <hr>
+                        <div class="item-options">
+                            <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-rice" data-price="49.00">₱49.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item17-->
+                
+                <!--start item18-->
+                <div class="menu-item">
+                    <img src="images/menu/TORI_BURGER.png" alt="tori burger" width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>TORI BURGER</center></span>
+                        <hr>
+                        <div class="item-options">
+                           <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-rice" data-price="49.00">w/ rice - ₱49.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item18-->
+                
+                <!--start item19-->
+                <div class="menu-item">
+                    <img src="images/menu/CHICKEN FUNSHOTS WITH RICE.jpg" alt="chicken funshots" width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>CHICKEN FUNSHOTS WITH RICE</center></span>
+                        <hr>
+                        <div class="item-options">
+                           <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-rice" data-price="40.00">w/ rice - ₱40.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item19-->
+                
+            </div><!--end menu items-->
+            </div> <!--meal menu-->
+            
+        <div class="menu" data-category="drink">
+            <h1 class="drink-h1">DRINKS</h1>
+            <div class="drinks">
+        <!-- Drink item content -->
+             <div class="menu-item">
+                    <img src="images/menu/KASALO.jpg" alt="KASALO" width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>KASALO</center></span>
+                        <hr>
+                        <div class="item-options">
+                           <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-rice" data-price="49.00">₱49.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            <!--end item 1-->
+                <div class="menu-item">
+                    <img src="images/menu/cokemismo.png" alt="mismo" width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>COKE MISMO</center></span>
+                        <hr>
+                        <div class="item-options">
+                           <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-rice" data-price="39.00">₱39.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            <!--end item 2-->
+                     <div class="menu-item">
+                    <img src="images/menu/bottlewater.jpg" alt="2big" width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>BOTTLED WATER</center></span>
+                        <hr>
+                        <div class="item-options">
+                           <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-rice" data-price="39.00">₱39.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!--end item3-->
+                 <div class="menu-item">
+                    <img src="images/menu/ice coffee2.jpg" alt="iced2" width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>ICED LATTE</center></span>
+                        <hr>
+                        <div class="item-options">
+                           <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-rice" data-price="39.00">₱39.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- end item4-->
+                <div class="menu-item">
+                    <img src="images/menu/iced%20macchiato.png" alt="iced3" width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>CARAMEL MACCHIATO</center></span>
+                        <hr>
+                        <div class="item-options">
+                           <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-rice" data-price="39.00">₱39.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- end item5-->
+                <div class="menu-item">
+                    <img src="images/menu/iced%20mocha.png" alt="iced4" width="30" height="30">
+                    <hr>
+                    <div class="item-info">
+                        <span class="item-name"><br><center>MOCHA</center></span>
+                        <hr>
+                        <div class="item-options">
+                           <label for="variety-siomai-1">Choose a variety:</label>
+                            <select id="variety-siomai-1" class="variety-dropdown">
+                                <option value="w-rice" data-price="39.00">₱39.00</option>
+                            </select>
+                        </div>
+                        <b>Quantity: </b><input type="number" class="item-quantity" value="1" min="1" max="1000">
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- end item4-->
+           </div> <!--end drink item -->
+        </div>
+    <!-- More menu items -->
+        </div><!--end container-->
+        
+            <!--CART BAR-->
+        <div id="ordersPopup" class="popup">
+            <div class="popup-content">
+                <div class="order-form">
+                    <h2>Your Orders</h2>
+                    <ul class="order-list">
+                <!-- Display selected items here -->
+                    </ul>
+            <div class="options">
+                <label><input type="radio" name="order-type" value="dine-in"> <b>Dine-In </b></label>
+                <br><br>
+                <label><input type="radio" name="order-type" value="take-out"><b>Take-Out</b></label>
+            </div>
+            <div class="customer-info">
+                <input type="text" id="customer-name" placeholder="Name" required>
+                <input type="email" id="customer-email" placeholder="Email" required pattern="[a-z0-9._%+-]+@gmail\.com" title="Please enter a valid Gmail address">
+                <input type="tel" id="customer-phone" pattern="\d{11}" placeholder="Phone Number" required>
+                <input type="time" id="pickup-time" min="08:00" max="20:00" required>
+            </div>
+            <button id="submit-order">Place Order (Total: ₱0.00)</button>
+        </div>
+    </div>
+    </div> 
+    </main>
+<footer class="footer">
+        <div class="footer-container">
+        <div class="footer-info">
+                
+                <h3><img src="images/location.png" alt="location">22 B Llenado St. Maysan Road<br>
+                (near CMIC PLV Annex), Valenzuela <br>
+                City</h3>
+               <h3><img src="images/clock.png" alt="clock">Mon - Sat: 9:00 am to 8:00 pm</h3>
+        </div>
+        <div class="footer-contact">
+            <h2>You can reach us here:</h2>
+                <div class="About-account">
+                    <h3><img src="images/fb logo.png" alt="About-fbaccount">Kuya Kyle's Siomai Haus</h3>
+                    <h3><img src="images/phonecall.png" atl="About-phonecall">0933 189 0759</h3>
+                    
+                    <h3><img src="images/mail.png" alt="About-mail">kuyakyle.siomaihaus@yahoo.com</h3>
+                </div>
+            </div>
+        </div>
+        <div class="footer-creators">
+                    <h4>Copyright © 2024 Kuya Kyle’s Siomai Haus.
+                        All rights reserved. 
+                            <br>Developers: Villanueva, L., Valenzuela, A.D. Sudsudan, R.</h4>
+             </div>
+    </footer>
+    
+    <script>
+        'use strict';
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            const orderList = document.querySelector('.order-list');
+            const submitOrderButton = document.getElementById('submit-order');
+        
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const menuItem = this.closest('.menu-item');
+                    const itemName = menuItem.querySelector('.item-info .item-name').textContent;
+                    const selectedOption = menuItem.querySelector('.variety-dropdown option:checked');
+                    if (!selectedOption) {
+                        alert('Please select an option.');
+                        return;
+                    }
+                    const itemPricePHP = parseFloat(selectedOption.getAttribute('data-price'));
+                    const itemQuantity = parseInt(menuItem.querySelector('.item-quantity').value);
+                    const itemOptionText = selectedOption.textContent;
+        
+                    const li = document.createElement('li');
+                    li.classList.add('order-item');
+                    li.innerHTML = `
+                        <div class="item-details">
+                            <span>${itemName}</span>
+                            <span>${itemOptionText}</span>
+                            <span>Quantity: ${itemQuantity}</span>
+                            <span>Total: ₱${(itemPricePHP * itemQuantity).toFixed(2)}</span>
+                        </div>
+                        <div class="remove-item">&times;</div>
+                    `;
+                    orderList.appendChild(li);
+                    updateTotalPrice();
+                });
+            });
+        
+            orderList.addEventListener('click', function (event) {
+                if (event.target.classList.contains('remove-item')) {
+                    event.target.parentElement.remove();
+                    updateTotalPrice();
+                }
+            });
+        
+            submitOrderButton.addEventListener('click', function () {
+                const orderType = document.querySelector('input[name="order-type"]:checked').value;
+                const customerName = document.getElementById('customer-name').value;
+                const customerEmail = document.getElementById('customer-email').value;
+                const customerPhone = document.getElementById('customer-phone').value;
+                const pickupTime = document.getElementById('pickup-time').value;
+        
+                if (validateInputs(customerName, customerEmail, customerPhone, pickupTime)) {
+                    generateReceipt(orderType, customerName, customerEmail, customerPhone, pickupTime);
+                    console.log(`Order type: ${orderType}`);
+                } else {
+                    alert('Please fill in all fields correctly.');
+                }
+            });
+        
+            function updateTotalPrice() {
+                let totalPricePHP = 0;
+                orderList.querySelectorAll('.order-item').forEach(item => {
+                    const itemPricePHP = parseFloat(item.querySelector('.item-details span:nth-child(4)').textContent.replace('Total: ₱', ''));
+                    totalPricePHP += itemPricePHP;
+                });
+                submitOrderButton.textContent = `Place Order (Total: ₱${totalPricePHP.toFixed(2)})`;
+            }
+        
+            function validateInputs(name, email, phone, time) {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                const phonePattern = /^[0-9]{10,11}$/;
+                return name.trim() !== '' && emailPattern.test(email) && phonePattern.test(phone) && time !== '';
+            }
+        
+            function generateReceipt(orderType, name, email, phone, time) {
+                const receiptNumber = generateReceiptNumber();
+                const receiptContent = `
+                    <div class="receipt">
+                        <button class="close-receipt">&times;</button>
+                        <h2>Receipt</h2>
+                        <h1><center><u> ${receiptNumber}</u></center></h1>
+                        <h2><center>Receipt Number</center></h2>
+                        <p>Order Type: ${orderType}</p>
+                        <h3>Order Details:</h3>
+                        <ul>
+                            ${Array.from(orderList.children).map(item => item.innerHTML).join('')}
+                        </ul>
+                        <p>Name: ${name}</p>
+                        <p>Email: ${email}</p>
+                        <p>Phone Number: ${phone}</p>
+                        <p>Pickup Time: ${time}</p>
+                    </div>
+                `;
+        
+                const receiptPopup = document.createElement('div');
+                receiptPopup.classList.add('receipt-popup');
+                receiptPopup.innerHTML = receiptContent;
+                document.body.appendChild(receiptPopup);
+        
+                receiptPopup.querySelector('.close-receipt').addEventListener('click', function () {
+                    window.location.href = 'index.html'; // Redirect to home page when close button is clicked
+                });
+            }
+        
+            function generateReceiptNumber() {
+                const timestamp = Date.now();
+                const randomNum = Math.floor(Math.random() * 1000);
+                return `RCPT-${timestamp}-${randomNum}`;
+            }
+        const cartBtn = document.getElementById('cartBtn');
+        const modal = document.getElementById('orderForm');
+        const span = document.getElementsByClassName('close')[0];
+        
+        cartBtn.onclick = function() {
+            modal.style.display = 'block';
+        }
+        
+        span.onclick = function() {
+            modal.style.display = 'none';
+        }
+        
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+        })
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const menus = document.querySelectorAll('.menu');
+        
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const category = this.getAttribute('data-category');
+        
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+                    // Add active class to the clicked button
+                    this.classList.add('active');
+        
+                    // Show/hide menu sections based on the selected category
+                    menus.forEach(menu => {
+                        if (category === 'all' || menu.getAttribute('data-category') === category) {
+                            menu.style.display = 'block';
+                        } else {
+                            menu.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        })
+        
+
+        </script>
+
+</body>
+</html>

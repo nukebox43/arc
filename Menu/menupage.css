@@ -1,0 +1,687 @@
+/*GLOBAL STYLE*/
+body {
+  background: linear-gradient(to right, yellow, orange);
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /*makes two columns given by contents*/
+  height: 15vh;
+  width: 100vw;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+header img {
+  height: 60px;
+}
+.placeholder {
+  height: 10em;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right: -10%;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navigation a {
+  margin: 20px;
+  padding: 0 5px;
+  font-family: "Cooper Black";
+  color: black;
+  font-size: 30px;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #4caf50;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: left;
+}
+
+.navigation a:hover {
+  color: #4caf50; /* Change this color to your preferred hover text color */
+}
+
+.navigation a:hover::after {
+  transform: scaleX(1);
+}
+
+footer {
+  background: #123870;
+  display: grid;
+  grid-template-areas:
+    "info contact"
+    "devs devs";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+.footer-container {
+  display: contents; /*childern follow the grid layout*/
+  font-size: 15px;
+  font-family: "Cooper";
+  color: white;
+}
+.footer-info,
+.footer-contact,
+.footer-creators {
+  padding: 10px;
+}
+.footer-info {
+  grid-area: info;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 20%;
+}
+.footer-contact {
+  grid-area: contact;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.footer img {
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  display: flex;
+}
+.footer-info h3,
+.footer-contact h3,
+.footer-creators h4 {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+.footer-creators {
+  grid-area: devs;
+  background-color: #3333336d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "Garamond", serif;
+  font-size: 15px;
+  color: white;
+}
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  top: 1%; /* Position 20% from the top */
+  left: 60%;
+  transform: translateX(-50%);
+}
+.filter-btn {
+  color: #000;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  font-size: 30px;
+  margin: 0 0px;
+  position: relative;
+  transition: background-color 0.3s;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.filter-btn:hover {
+  background-color: #45a049;
+  color: rgb(255, 255, 255);
+}
+
+.filter-btn.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 5px;
+  background-color: #4caf50;
+  border-radius: 2px;
+}
+
+/* cartbutton */
+
+/* Ensure there's enough space for the items */
+.menu-container {
+  max-width: 65vw; /* Adjust as needed */
+  margin: 0 auto; /* Center the container */
+  position: relative;
+  left: -15%;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+  justify-content: space-between; /* Distribute items evenly */
+  padding: 20px; /* Add padding to the container */
+}
+.meals-h1 {
+  font-family: "Cooper";
+  font-size: 50px;
+}
+.meals {
+  font-size: 15px;
+  font-family: "Cooper";
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+  justify-content: space-between; /* Distribute items evenly */
+  padding: 20px;
+}
+.drinks {
+  font-size: 15px;
+  font-family: "Cooper";
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+  justify-content: space-between; /* Distribute items evenly */
+  padding: 20px;
+}
+.drink-h1 {
+  font-family: "Cooper";
+  font-size: 50px;
+}
+.menu-item {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(33.33% - 20px); /* Adjust width to one-third of the container */
+  max-width: 300px;
+  margin-bottom: 20px;
+  margin-right: 20px; /* Add margin for spacing between items */
+  transition: transform 0.3s;
+  display: flex; /* Make the menu item container a flex container */
+  flex-direction: column; /* Stack the child elements vertically */
+  /* Other existing styles */
+}
+#cartBtn {
+  display: none; /* Itago ang cart button sa default */
+}
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 10px; /* Add margin below the image */
+}
+
+.item-info {
+  flex: 1; /* Make the item info section flexible to take up remaining space */
+  padding: 20px;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center content vertically */
+  margin-bottom: 10px; /* Reduce the margin to create space for the button */
+}
+
+.item-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.item-price {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.item-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: px;
+}
+
+.item-option label {
+  margin-right: 10px;
+}
+.item-quantity {
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  width: 60px;
+}
+.quantity-label {
+  flex: 0 0 auto;
+}
+.menu-item b {
+  position: relative;
+  left: -28px;
+}
+.add-to-cart {
+  width: 100%; /* Make the button full width of the container */
+  padding: 10px 0; /* Adjust padding as needed */
+  background-color: #4caf50;
+  font-family: "Fraunces";
+  font-size: 15px;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: #45a049;
+}
+
+.item-box {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* General styles for the "Your Orders" section */
+
+.order-form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  position:absolute;
+  top: 80%;
+  left: 70%;
+  transform: translateY(-45%);
+  width: 350px; /* Slightly wider for better layout */
+  text-align: center;
+  max-height: 80vh; /* Ensure it doesn't exceed viewport height */
+  overflow-y: auto; /* Add vertical scroll if needed */
+}
+
+.order-form h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #333;
+  text-transform: uppercase;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.order-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  text-align: left; /* Align text to the left for better readability */
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9; /* Light background for each item */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.order-item .item-details {
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.order-item .item-details span {
+  margin-bottom: 5px;
+}
+
+.order-item .remove-item {
+  color: #e74c3c;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.order-item .remove-item:hover {
+  color: #c0392b;
+}
+
+.options {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.customer-info input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+#submit-order {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+#submit-order:hover {
+  background-color: #45a049;
+}
+
+
+/* Styles for receipt popup */
+.receipt-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  max-width: 80%;
+}
+
+.receipt-popup h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.receipt-popup p {
+  margin-bottom: 10px;
+  color: #666666;
+}
+
+.receipt-popup p:last-child {
+  margin-bottom: 0;
+}
+
+.receipt-popup .receipt-number {
+  font-size: 1.5em; /* Increased font size for receipt numbers */
+  font-weight: bold;
+  text-align: center; /* Center align the receipt number */
+  color: #4caf50; /* Change color to green for emphasis */
+  margin-bottom: 20px; /* Add some space below the receipt number */
+}
+
+.receipt-popup button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 30px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.receipt-popup button.close-receipt {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #999999;
+}
+
+.receipt-popup button.close-receipt:hover {
+  color: #555555;
+}
+
+.receipt-popup button:hover {
+  background-color: #45a049;
+}
+
+/* Additional design */
+.receipt-popup .receipt-details {
+  border-top: 2px solid #dddddd;
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.receipt-popup .receipt-details p {
+  margin-bottom: 15px;
+}
+
+.receipt-popup .total-amount {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333333;
+}
+
+/*MEDIA QUERY NG MENU PARA SA CELLPHONE*/
+@media screen and (max-width: 600px){
+  #cartBtn {
+    display: flex; /* Ipakita ang cart button gamit ang flexbox layout */
+    align-items: center; /* I-center ang teksto at imahe */
+    background-color: #45a049;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#cartBtn:hover {
+  background-color: #45a049;
+}
+
+  .order-form {
+    display: none;
+    width: 100%;
+    max-height: auto;
+    font-size: 10px;
+}
+
+.meals-h1 {
+    font-size: 25px;
+}
+.drink-h1 {
+    font-size: 25px;
+}
+.filter-buttons {
+    text-align:start;
+    margin-bottom: 0px;
+    position: relative;
+    top: 8.2vh; /* Position 20% from the top */
+    left: 100%; /* Position in the center */
+    transform: translateX(-50%);
+}
+
+.filter-btn {
+    display:inline-block;
+    font-size: 22px;
+    margin-right: 0px; /* Add some space between buttons */
+}
+
+.menu-item {
+  position: relative;
+    left:30%;
+    font-size: 9px;
+    width:100%; /* Adjust width for 3 items in a row with some margin */
+    margin: 0 20px 10px; /* Add margin between items */
+    padding: 20px;
+    border: 1px solid #eee; /* Add border */
+    border-radius: 8px; /* Add border radius */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    background-color: #fff; /* Set background color */
+    transition: transform .4s ease; /* Add transition effect */
+}
+
+#cartBtn {
+  background-color: #007bff; /* Kulay ng background */
+  color: white; /* Kulay ng text */
+  border: none; /* Walang border */
+  padding: 10px 20px; /* Lapad at taas ng padding */
+  border-radius: 5px; /* Radius ng mga sulok */
+  cursor: pointer; /* Pagiging pointer kapag may hover */
+  font-size: 16px; /* Laki ng font */
+  margin-left: 10px; /* Margin sa kaliwa (dagdag ito depende sa iyong disenyo) */
+}
+
+#cartBtn:hover {
+  background-color: #0056b3; /* Kulay ng background kapag naka-hover */
+}
+
+
+
+
+
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /*makes two columns given by contents*/
+    height: 20vh;
+    width: 100vw;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    flex-direction: column;
+  }
+  header img {
+    height: 80px;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 0%;
+  }
+  .navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-left: -5%;
+  }
+  .navigation a {
+    margin: 10px;
+    padding: 0 5px;
+    font-family: "Cooper Black";
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  footer {
+    background: #123870;
+    display: grid;
+    grid-template-areas:
+      "info"
+      "contact"
+      "devs";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 5px;
+    margin-bottom: -20%;
+    width: 100vw;
+  }
+  .footer-container {
+    display: contents; /*childern follow the grid layout*/
+    font-size: 12px;
+    font-family: "Cooper";
+    color: white;
+  }
+  .footer-info,
+  .footer-contact,
+  .footer-creators {
+    padding: 5px 43px;
+    text-align: center;
+  }
+  .footer-info {
+    grid-area: info;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 12%;
+    margin-left: 3%;
+  }
+  .footer-contact {
+    grid-area: contact;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+    margin-left: -100px;
+  }
+  .footer img {
+    height: 25px;
+    width: 25px;
+    margin: 10px;
+    display: flex;
+  }
+  .footer-info h2,
+  .footer-contact h3,
+  .footer-creators h4 {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+    font-size: 12px;
+  }
+  .footer-creators {
+    grid-area: devs;
+    background-color: #3333336d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    font-family: "Garamond", serif;
+    font-size: 15px;
+    color: white;
+    }
+    
+    .placeholder{
+        height: 20vh;
+    }
+  }
